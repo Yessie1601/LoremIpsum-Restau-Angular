@@ -6,6 +6,29 @@ h1, h2 {
   line-height: 1.2;
 }
 
+.review-btn {
+  background: #8db56a;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  width: 10%;
+}
+.review-btn:hover,
+.review-btn:focus {
+  background: #7aa35a;
+  text-decoration: none;
+}
+
 .divider {
   width: 96px;
   height: 1px;

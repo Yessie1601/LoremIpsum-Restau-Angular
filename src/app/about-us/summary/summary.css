@@ -1,0 +1,31 @@
+.motivation {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30, 50, 80, 0.08);
+  color: #1a2a52;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.motivation h2, .motivation h3 {
+  text-align: center;
+  color: #8db56a;
+  margin-bottom: 1rem;
+}
+.motivation p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.motivation hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #d1d1d1;
+}
+.motivation .greeting {
+  margin-top: 2rem;
+  text-align: right;
+  font-style: italic;
+  color: #7f7f7f;
+}
