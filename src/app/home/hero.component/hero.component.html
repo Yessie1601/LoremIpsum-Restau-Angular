@@ -1,0 +1,64 @@
+<section class="hero" role="img" aria-label="Salad with fresh green leaves and cooked mushrooms on a white plate, placed on a light textured surface with a fork on the right side">
+  <div class="hero-content">
+    <h1>
+      Welkom bij<br />
+      Restaurant<br />
+      Lorem Ipsum
+    </h1>
+    <p>
+      Bent u op zoek naar de ideale locatie voor een feest, huwelijk, verjaardag of bedrijfsevenement. Lorem Ipsum heeft alles in huis om er een onvergetelijke ervaring van te maken!
+    </p>
+    <div class="btn-group">
+      <button type="button" (click)="goToMenu()">Ons menu</button>
+      <button type="button">Contacteer ons</button>
+    </div>
+  </div>
+  <div class="reservation-container">
+    <div class="reservation-left">
+      <div class="reservation-header">
+        <div class="phone">
+          <div class="reservation-title">Online reserveren</div>
+          <p class="note">*Een reservatie is pas compleet na bevestiging van het restaurant.*</p>
+        </div>
+        <div class="phone">
+          <div class="phone-title">Telefonisch reserveren</div>
+          <div class="phone-number"> 02/124 59 78</div>
+        </div>
+      </div>
+      <form class="reservation-form" #reservationForm="ngForm" (ngSubmit)="sendEmail(reservationForm)">
+        <div class="form-group">
+          <input type="email" name="email" ngModel required placeholder="E-mail*">
+        </div>
+        <div class="form-group">
+          <input
+            type="date"
+            name="date"
+            ngModel
+            [min]="minDate"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <input
+            type="time"
+            name="time"
+            ngModel
+            step="1800"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <select name="people" ngModel>
+            <option value="1">1 persoon</option>
+            <option value="2" selected>2 personen</option>
+            <option value="3">3 personen</option>
+            <option value="4">4 personen</option>
+            <option value="5">5 personen</option>
+            <option value="6">6 personen</option>
+          </select>
+        </div>
+        <button type="submit">Vraag een reservatie aan*</button>
+      </form>
+    </div>
+  </div>
+</section>

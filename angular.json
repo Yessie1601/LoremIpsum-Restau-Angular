@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "untitled": {
+    "LoremIpsum": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -42,7 +42,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "untitled:build:production"
+              "buildTarget": "LoremIpsum:build:production"
             },
             "development": {
-              "buildTarget": "untitled:build:development"
+              "buildTarget": "LoremIpsum:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,5 +89,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fa3d3608-8d97-4904-adad-0eb1fcf04726"
   }
 }

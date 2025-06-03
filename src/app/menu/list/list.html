@@ -1,0 +1,16 @@
+<table class="menu-table">
+  <thead>
+  <tr>
+    <th>Dish</th>
+    <th>Description</th>
+    <th>Price (€)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of menuItems">
+    <td>{{ item.name }}</td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.price }}</td>
+  </tr>
+  </tbody>
+</table>
