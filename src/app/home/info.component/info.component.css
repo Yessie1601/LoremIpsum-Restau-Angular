@@ -54,6 +54,7 @@ h1, h2 {
 .image-container {
   position: relative;
   flex: 1 1 320px;
+  overflow: hidden;
 }
 .image-container img {
   width: 100%;
@@ -73,6 +74,12 @@ h1, h2 {
   box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
   user-select: none;
   background-color: transparent;
+  z-index: 1;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .label-gold {
   background-color: rgba(187,165,106,0.8);
@@ -103,12 +110,12 @@ p.text-small {
   font-style: italic;
   line-height: 1.4;
 }
-
 @media (max-width: 900px) {
   h1, h2, p.text-small { font-size: 1rem; }
   .label {
     font-size: 1.2rem;
     padding: 0.5rem;
+    max-width: 100%;
   }
   p.text-small {
     max-width: 100%;
