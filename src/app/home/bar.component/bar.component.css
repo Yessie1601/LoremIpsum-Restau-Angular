@@ -1,10 +1,10 @@
 .top-bar {
-  padding: 2rem 15rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 8px;
+  background: #f8f9fa;
 }
 
 .left,
@@ -12,43 +12,50 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
+  padding: 0.5rem;
 }
+
 .left {
-  gap: 4px;
+  gap: 0.5rem;
   color: #1e293b;
   font-weight: 400;
 }
+
 .left .icon {
   color: #64748b;
-  font-size: 14px;
+  width: 20px;
+  height: 20px;
 }
+
 .open-text {
   color: #22c55e;
   text-decoration: none;
+  padding: 0.25rem 0.5rem;
 }
+
 .right {
   font-weight: 400;
   color: #1e293b;
 }
+
 .right a {
   color: #1e40af;
   text-decoration: underline;
-  margin-left: 4px;
+  padding: 0.25rem 0.5rem;
 }
-@media (max-width: 900px) {
+
+@media (max-width: 768px) {
   .top-bar {
-    padding: 1.2rem 1rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 0.5rem;
+    padding: 1rem;
   }
-  .right {
-    text-align: left;
+
+  .right, .left {
     width: 100%;
-    margin-top: 0.5rem;
-  }
-  .left {
-    width: 100%;
-    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 }
