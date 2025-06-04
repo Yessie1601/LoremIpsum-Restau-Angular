@@ -22,7 +22,9 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css"
@@ -80,8 +82,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              "src/web.config"
+              }
             ],
             "styles": [
               "src/styles.css"
