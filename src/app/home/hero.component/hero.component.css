@@ -1,295 +1,101 @@
 .hero {
   position: relative;
-  min-height: 55rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
+  min-height: 60vh;
+  width: 100%;
   overflow: hidden;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('/assets/img/background.png');
-  background-position: center 70%;
-  background-repeat: no-repeat;
-  background-size: 100% 100rem;
-  z-index: 0;
+  background-position: center;
+  background-size: cover;
   filter: brightness(0.85);
 }
 
 .hero-content {
-  position: absolute;
-  top: 2.5rem;
-  left: 12rem;
+  position: relative;
   z-index: 2;
-  color: #1a2e59;
-  background: none;
-  padding: 0;
+  padding: 2rem;
   max-width: 600px;
-  border-radius: 0;
-  box-shadow: none;
-  margin-bottom: 0;
-  text-align: left;
+  margin: 2rem auto;
+  color: #1a2e59;
 }
 
 .hero-content h1 {
-  font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
   line-height: 1.2;
-  margin: 0 0 1.2rem 0;
-  letter-spacing: 0.5px;
-  color: #1a2e59;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.18);
 }
 
 .hero-content p {
-  color: darkslategrey;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2rem;
   line-height: 1.5;
-  margin: 0 0 2rem 0;
-  max-width: 480px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .btn-group {
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .btn-group button {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   cursor: pointer;
-  border: none;
-  background: #7ca65c;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(124,166,92,0.08);
-  transition: background 0.2s, transform 0.2s;
-}
-
-.btn-group button:hover {
-  background: #6b9450;
-  transform: translateY(-2px) scale(1.03);
-}
-
-.btn-group button:first-child {
-  background: transparent;
-  color: dimgrey;
-  border: 2px solid grey;
-}
-
-.btn-group button:first-child:hover {
-  background: #eaf5e2;
-  color: #6b9450;
+  transition: all 0.3s ease;
 }
 
 .reservation-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
   background: rgba(26,46,89,0.85);
-  border-radius: 0;
-  box-shadow: none;
-  padding: 1.5rem 2rem 1rem 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  min-height: 120px;
-  gap: 2rem;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.reservation-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 1 0;
-  min-width: 0;
-  margin-left: 10rem;
-}
-
-.reservation-title {
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.note {
-  font-size: 0.95rem;
-  color: #b3e0ff;
-  margin-bottom: 0.8rem;
-  font-style: italic;
+  padding: 2rem;
+  color: white;
+  width: 100%;
 }
 
 .reservation-form {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 0.7rem;
-  margin-top: 0.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .form-group {
-  margin-bottom: 0;
-}
-
-label {
-  display: none;
-}
-
-.reservation-form input,
-.reservation-form select {
-  width: 180px;
-  height: 3rem;
-  border-radius: 0;
-  font-size: 1.1rem;
-  padding: 0 1rem;
-  border: 1px solid #314a7c;
-  box-sizing: border-box;
-  background: #fff;
-  color: #1a2e59;
-  margin-bottom: 0;
-  transition: border 0.2s;
-}
-
-input:focus, select:focus {
-  border-color: #7ca65c;
-  outline: none;
-}
-
-.reservation-form select {
-  min-width: 110px;
-}
-
-.reservation-form button[type="submit"] {
-  background: #c1a96a;
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 0;
-  margin-left: 0.5rem;
-  font-size: 1.1rem;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.reservation-form button[type="submit"]:hover {
-  background: #a88d4e;
-  transform: translateY(-2px) scale(1.03);
-}
-
-.reservation-header {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.phone {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  margin-right: 15rem;
 }
 
-.phone-title {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.2rem;
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #314a7c;
+  border-radius: 4px;
 }
 
-.phone-number {
-  font-size: 1.1rem;
-  color: #b3e0ff;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.icon {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    padding: 2rem 1rem 12rem 1rem;
-    min-height: 40rem;
-  }
+@media (max-width: 768px) {
   .hero-content {
-    position: static;
-    top: unset;
-    left: unset;
-    max-width: 100%;
-    padding: 1rem 0 0 0;
+    padding: 1rem;
+    margin: 1rem;
   }
-  .reservation-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.2rem;
-    padding: 1.2rem 1rem 1rem 1rem;
-    min-height: unset;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .reservation-left {
-    margin-left: 0;
-  }
-  .reservation-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-    margin-bottom: 0.5rem;
-  }
-  .phone {
-    margin-right: 0;
-  }
-  .reservation-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem 0.7rem;
-    margin-left: 0;
-    margin-right: 0;
-    justify-items: center;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .reservation-form .form-group {
-    margin-bottom: 0;
-  }
-  .reservation-form button[type="submit"] {
-    grid-column: 1 / -1;
-    margin-left: 0;
-    width: 100%;
-    justify-self: center;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
 
-.hero-content img,
-.header-logo,
-.icon {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  .reservation-container {
+    padding: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
 }
