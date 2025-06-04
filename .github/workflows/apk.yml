@@ -54,6 +54,11 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
+      - name: Prepare web assets for Capacitor
+        run: |
+          rm -rf dist
+          cp -r dist/LoremIpsum/browser dist
+
       - name: Install Capacitor and Android SDK dependencies
         run: |
           npm install @capacitor/core @capacitor/cli
