@@ -57,7 +57,7 @@ jobs:
       - name: Prepare web assets for Capacitor
         run: |
           rm -rf dist
-          cp -r dist/LoremIpsum/browser dist
+          cp -r dist/LoremIpsum dist
 
       - name: Install Capacitor and Android SDK dependencies
         run: |
