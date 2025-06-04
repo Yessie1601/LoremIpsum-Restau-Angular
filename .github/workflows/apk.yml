@@ -68,6 +68,9 @@ jobs:
           yes | sdkmanager --licenses
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
+      - name: Add Android platform
+        run: npx cap add android
+
       - name: Copy web build to Android
         run: npx cap sync android
 
