@@ -23,6 +23,11 @@ export class HeroComponent {
     this.router.navigate(['/menu']);
   }
 
+  openLinkedIn(event: Event) {
+    event.preventDefault();
+    window.open('https://www.linkedin.com/in/yassine-ed-daïf/', '_blank', 'noopener');
+  }
+
   sendEmail(form: any) {
     if (form.invalid) return;
     emailjs.send(
