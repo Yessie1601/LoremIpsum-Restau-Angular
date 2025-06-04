@@ -2,7 +2,6 @@ footer {
   background: #f5f5f5;
   padding: 2rem 1rem;
 }
-
 .footer-top {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -11,23 +10,19 @@ footer {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .footer-left {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .logo-container img {
   max-width: 180px;
   height: auto;
 }
-
 .contact-info {
   font-size: 1rem;
   line-height: 1.6;
 }
-
 .footer-menu,
 .footer-hours,
 .footer-newsletter {
@@ -35,7 +30,6 @@ footer {
   flex-direction: column;
   gap: 1rem;
 }
-
 .footer-menu h2,
 .footer-hours h2,
 .footer-newsletter h2 {
@@ -43,45 +37,53 @@ footer {
   color: #2f3a66;
   margin-bottom: 0.5rem;
 }
-
 .footer-menu a {
   color: #2f3a66;
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0.5rem 0;
 }
-
 .footer-menu a:hover {
   color: #b59f5b;
 }
-
 .newsletter-form {
   display: flex;
   gap: 1rem;
+  flex-direction: row;
 }
-
 .newsletter-input {
   flex: 1;
   padding: 0.75rem 1rem;
   border: 1px solid #d3d6e1;
   border-radius: 8px;
   font-size: 1rem;
+  min-width: 0;
 }
-
 .newsletter-button {
-  padding: 0.75rem 1.5rem;
-  background: #2f3a66;
-  color: white;
-  border: none;
+  width: auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter-button:hover {
+  border: none;
   background: #1a2545;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
 }
-
+.newsletter-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  display: block;
+}
+.newsletter-button:hover {
+  background: #0d1330;
+}
 .footer-bottom {
   max-width: 1200px;
   margin: 2rem auto 0;
@@ -93,41 +95,34 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 .social-icons {
   display: flex;
   gap: 1.5rem;
 }
-
 .social-icon {
   padding: 0.5rem;
 }
-
 @media (max-width: 768px) {
   footer {
     padding: 2rem 1rem;
   }
-
   .footer-top {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   .newsletter-form {
-    flex-direction: column;
+    flex-direction: row;
   }
-
   .newsletter-button {
-    width: 100%;
-    padding: 1rem;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
-
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 1rem 0;
   }
-
   .social-icons {
     justify-content: center;
   }

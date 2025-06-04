@@ -32,8 +32,8 @@
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger-icon circle-btn hamburger">&#9776;</label>
       <ul class="menu-dropdown">
-        <li>
-          <a (click)="goToAboutUs()">About Us</a>
+        <li (click)="goToAboutUs()">
+          About Us
         </li>
         <li (click)="openInfo()" style="cursor:pointer; user-select:none;">
           Info

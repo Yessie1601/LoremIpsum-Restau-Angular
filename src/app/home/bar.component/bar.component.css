@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   background: #f8f9fa;
 }
-
 .left,
 .right {
   display: flex;
@@ -14,36 +13,30 @@
   white-space: nowrap;
   padding: 0.5rem;
 }
-
 .left {
   gap: 0.5rem;
   color: #1e293b;
   font-weight: 400;
 }
-
 .left .icon {
   color: #64748b;
   width: 20px;
   height: 20px;
 }
-
 .open-text {
   color: #22c55e;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
 }
-
 .right {
   font-weight: 400;
   color: #1e293b;
 }
-
 .right a {
   color: #1e40af;
   text-decoration: underline;
   padding: 0.25rem 0.5rem;
 }
-
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
@@ -51,7 +44,6 @@
     gap: 0.5rem;
     padding: 1rem;
   }
-
   .right, .left {
     width: 100%;
     justify-content: flex-start;
