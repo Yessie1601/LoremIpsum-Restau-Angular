@@ -1,6 +1,8 @@
-# Untitled
+# LoremIpsum-Restau-Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+Made for a job application adn to learn Angular from scratch.
+It started with the following figma design:
+<img height="500" src=".\src\assets\img\Restaurant.png" width="250"/>
 
 ## Development server
 
