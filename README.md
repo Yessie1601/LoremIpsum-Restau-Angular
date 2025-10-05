@@ -1,6 +1,6 @@
 # LoremIpsum-Restau-Angular
 
-Made for a job application adn to learn Angular from scratch.
+Made for a job application and to learn Angular from scratch.
 It started with the following figma design:
 <img height="500" src=".\src\assets\img\Restaurant.png" width="250"/>
 
